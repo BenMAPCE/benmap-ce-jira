@@ -13,71 +13,85 @@ namespace BenMAPJiraConnector
         private const string ENCRYPTION_IV = "55555555556666666666777777777788";
         private const string FILE_NAME = "BenMAPJiraConnector.txt";
 
-        public string GetURL()
+        private enum LineIndex { URL, USERNAME, PASSWORD, PROJECT_KEY };
+
+        private string GetDecrypted(LineIndex lineIndex)
         {
-            string encrypted = "";
-            string decrypted = "";
+            string encrypted = null;
+            string decrypted = null;
 
-            return decrypted;        
-        }
+            encrypted = ReadLine((int)lineIndex);
 
-        public string GetUsername()
-        {
-            string encrypted = "";
-            string decrypted = "";
+            if (encrypted != null)
+            {
+                //get bytes
+                byte[] encryptedBytes = System.Text.Encoding.UTF8.GetBytes(encrypted);
+                byte[] encryptionKeyBytes = System.Text.Encoding.UTF8.GetBytes(ENCRYPTION_KEY);
+                byte[] encryptionIVBytes = System.Text.Encoding.UTF8.GetBytes(ENCRYPTION_IV);
 
-            return decrypted; 
-        }
+                //decrypt
+                Decrypt objDecrypt = new Decrypt();
+                decrypted = objDecrypt.DecryptStringFromBytes(encryptedBytes, encryptionKeyBytes, encryptionIVBytes);
+            }
 
-        public string GetPassword()
-        {
-            string encrypted = "";
-            string decrypted = "";
-
-            return decrypted; 
-        }
-
-        public string GetProjectKey()
-        {
-            string encrypted = "";
-            string decrypted = "";
-
-            return decrypted; 
+            return decrypted;
+           
+        
         }
 
         private string ReadLine(int index)
         {
-            string line = "";
+            string line = null;
 
-            string path = FILE_NAME;
+            string path = AppDomain.CurrentDomain.BaseDirectory + @"\" + FILE_NAME;
 
             try
             {
                 if (!File.Exists(path))
                 {
-                    return line;
+                    return null;
                 }
 
-                using (StreamReader sr = new StreamReader(path))
+                using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
                 {
-                    while (sr.Peek() >= 0)
+                    int i = 0;
+                    while (i <= index)
                     {
-                        Console.WriteLine(sr.ReadLine());
+                        line = sr.ReadLine();
+                        i++;
                     }
+
+                    return line;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("The process failed: {0}", e.ToString());
+                return null;
             }
 
-
-
-            return line;
-
-
-            
         }
+
+        public string GetURL()
+        {
+            return GetDecrypted(LineIndex.URL);
+        }
+
+        public string GetUsername()
+        {
+            return GetDecrypted(LineIndex.USERNAME);
+        }
+
+        public string GetPassword()
+        {
+            return GetDecrypted(LineIndex.PASSWORD);
+        }
+
+        public string GetProjectKey()
+        {
+            return GetDecrypted(LineIndex.PROJECT_KEY);
+        }
+
+        
 
 
     }
