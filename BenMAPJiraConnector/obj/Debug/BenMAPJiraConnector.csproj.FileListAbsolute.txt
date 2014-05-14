@@ -1,0 +1,4 @@
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnector\bin\Debug\BenMAPJiraConnector.dll
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnector\bin\Debug\BenMAPJiraConnector.pdb
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnector\obj\Debug\BenMAPJiraConnector.dll
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnector\obj\Debug\BenMAPJiraConnector.pdb
