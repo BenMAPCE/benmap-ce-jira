@@ -1,0 +1,7 @@
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\obj\x86\Debug\BenMAPJiraConnectorTest.frmTest.resources
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\obj\x86\Debug\BenMAPJiraConnectorTest.Properties.Resources.resources
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\obj\x86\Debug\BenMAPJiraConnectorTest.csproj.GenerateResource.Cache
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\bin\Debug\BenMAPJiraConnectorTest.exe
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\bin\Debug\BenMAPJiraConnectorTest.pdb
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\obj\x86\Debug\BenMAPJiraConnectorTest.exe
+C:\RTI\Git\benmap-ce-jira-connect\BenMAPJiraConnectorTest\obj\x86\Debug\BenMAPJiraConnectorTest.pdb
