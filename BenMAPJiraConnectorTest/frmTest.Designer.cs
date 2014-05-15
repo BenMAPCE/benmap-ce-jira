@@ -113,6 +113,7 @@
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDecrypt
             // 
@@ -122,6 +123,7 @@
             this.btnDecrypt.TabIndex = 19;
             this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // label1
             // 
@@ -129,9 +131,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(538, 34);
             this.label1.TabIndex = 21;
-            this.label1.Text = "To test the BenMAPJiraConnector, place the BenMAPJiraConnector.dll and BenMAPJir" +
-                "aConnector.txt in the same directory as this application.  Click Decrypt to read" +
-                " the values from the encrypted file.";
+            this.label1.Text = "To test the BenMAPJiraConnector, place the BenMAPJiraConnector.dll and BenMAPJira" +
+                "Connector.txt in the same directory as this application.  Click Decrypt to read " +
+                "the values from the encrypted file.";
             // 
             // frmTest
             // 
