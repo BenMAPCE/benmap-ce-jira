@@ -10,7 +10,6 @@ C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.exe
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.pdb
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\bin\Debug\BenMAPCrypt.exe
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\bin\Debug\BenMAPCrypt.pdb
-C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.csprojResolveAssemblyReference.cache
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.frmMain.resources
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.Properties.Resources.resources
 C:\RTI\Git\benmap-ce-jira-connect\BenMAPCrypt\obj\x86\Debug\BenMAPCrypt.csproj.GenerateResource.Cache

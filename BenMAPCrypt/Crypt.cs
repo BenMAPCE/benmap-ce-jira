@@ -19,6 +19,37 @@ namespace BenMAPCrypt
         
         }
 
+        private bool IsValid(byte[] plainText, byte[] Key, byte[] IV)
+        {
+            // Check arguments. 
+            if (plainText == null || plainText.Length <= 0)
+            {
+                return false;
+            }
+            if (Key == null || Key.Length <= 0)
+            {
+                return false;
+            }
+            if (IV == null || IV.Length <= 0)
+            {
+                return false;
+            }
+
+            //check key, iv lengths
+            if (Key.Length != (KEY_SIZE / 8))
+            {
+                return false;
+            }
+
+            if (IV.Length != (BLOCK_SIZE / 8))
+            {
+                return false;
+            }
+
+
+            return true;
+        }
+
         private bool IsValid(string plainText, byte[] Key, byte[] IV) 
         {
             // Check arguments. 
@@ -97,8 +128,7 @@ namespace BenMAPCrypt
         public string DecryptStringFromBytes(byte[] cipherText, byte[] Key, byte[] IV)
         {
 
-            string strCipherText = System.Text.Encoding.UTF8.GetString(cipherText);
-            if (!IsValid(strCipherText, Key, IV))
+            if (!IsValid(cipherText, Key, IV))
             {
                 return null;
             }

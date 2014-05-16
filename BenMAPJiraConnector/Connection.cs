@@ -25,7 +25,7 @@ namespace BenMAPJiraConnector
             if (encrypted != null)
             {
                 //get bytes
-                byte[] encryptedBytes = System.Text.Encoding.UTF8.GetBytes(encrypted);
+                byte[] encryptedBytes = System.Convert.FromBase64String(encrypted);
                 byte[] encryptionKeyBytes = System.Text.Encoding.UTF8.GetBytes(ENCRYPTION_KEY);
                 byte[] encryptionIVBytes = System.Text.Encoding.UTF8.GetBytes(ENCRYPTION_IV);
 
@@ -52,7 +52,7 @@ namespace BenMAPJiraConnector
                     return null;
                 }
 
-                using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
+                using (StreamReader sr = new StreamReader(path))
                 {
                     int i = 0;
                     while (i <= index)
