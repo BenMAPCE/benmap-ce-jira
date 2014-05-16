@@ -122,29 +122,29 @@ namespace BenMAPCrypt
 
                 //open file for writing
                 FileStream fs = new FileStream(txtFile.Text.Trim(), FileMode.Create);
-                StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);               
+                StreamWriter sw = new StreamWriter(fs);               
 
                 // Encrypt the strings to an array of bytes.
                 // and write to file
 
                 //URL
                 byte[] encrypted = crypto.EncryptStringToBytes(txtURL.Text.Trim(), encryptionKey, encryptionIV);
-                string strEncrypted = System.Text.Encoding.UTF8.GetString(encrypted);
+                string strEncrypted = System.Convert.ToBase64String(encrypted);
                 sw.WriteLine(strEncrypted);
 
                 //Username
                 encrypted = crypto.EncryptStringToBytes(txtUsername.Text.Trim(), encryptionKey, encryptionIV);
-                strEncrypted = System.Text.Encoding.UTF8.GetString(encrypted);
+                strEncrypted = System.Convert.ToBase64String(encrypted);
                 sw.WriteLine(strEncrypted);
 
                 //Password
                 encrypted = crypto.EncryptStringToBytes(txtPassword.Text.Trim(), encryptionKey, encryptionIV);
-                strEncrypted = System.Text.Encoding.UTF8.GetString(encrypted);
+                strEncrypted = System.Convert.ToBase64String(encrypted);
                 sw.WriteLine(strEncrypted);
 
                 //Project Key
                 encrypted = crypto.EncryptStringToBytes(txtProjectKey.Text.Trim(), encryptionKey, encryptionIV);
-                strEncrypted = System.Text.Encoding.UTF8.GetString(encrypted);
+                strEncrypted = System.Convert.ToBase64String(encrypted);
                 sw.WriteLine(strEncrypted);
 
                 sw.Close();
@@ -153,6 +153,7 @@ namespace BenMAPCrypt
                 MessageBox.Show("File generated successfully!");
 
                 // Decrypt the bytes to a string. 
+                string roundtrip = crypto.DecryptStringFromBytes(System.Convert.FromBase64String(strEncrypted), encryptionKey, encryptionIV);
                 //string roundtrip = crypto.DecryptStringFromBytes(encrypted, encryptionKey, encryptionIV);
                 
 
