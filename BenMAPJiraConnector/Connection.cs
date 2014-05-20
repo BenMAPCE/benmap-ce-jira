@@ -9,8 +9,8 @@ namespace BenMAPJiraConnector
     public class Connection
     {
         //default values
-        private const string ENCRYPTION_KEY = "11111111112222222222333333333344";
-        private const string ENCRYPTION_IV = "55555555556666666666777777777788";
+        private const string ENCRYPTION_KEY = "o111111111222222222233333333334T";
+        private const string ENCRYPTION_IV = "P555555555666666666677777777778u";
         private const string FILE_NAME = "BenMAPJiraConnector.txt";
 
         private enum LineIndex { URL, USERNAME, PASSWORD, PROJECT_KEY };

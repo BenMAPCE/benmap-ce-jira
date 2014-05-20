@@ -18,8 +18,8 @@ namespace BenMAPCrypt
             InitializeComponent();
 
             //default values
-            txtEncryptionKey.Text = "11111111112222222222333333333344";
-            txtEncryptionIV.Text = "55555555556666666666777777777788";
+            txtEncryptionKey.Text = "o111111111222222222233333333334T";
+            txtEncryptionIV.Text = "P555555555666666666677777777778u";
 
             txtURL.Text =  "https://f8nnm8p.atlassian.net/";
             txtUsername.Text = "BenMAP-CE";
@@ -153,7 +153,7 @@ namespace BenMAPCrypt
                 MessageBox.Show("File generated successfully!");
 
                 // Decrypt the bytes to a string. 
-                string roundtrip = crypto.DecryptStringFromBytes(System.Convert.FromBase64String(strEncrypted), encryptionKey, encryptionIV);
+                //string roundtrip = crypto.DecryptStringFromBytes(System.Convert.FromBase64String(strEncrypted), encryptionKey, encryptionIV);
                 //string roundtrip = crypto.DecryptStringFromBytes(encrypted, encryptionKey, encryptionIV);
                 
 
