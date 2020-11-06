@@ -9,6 +9,7 @@ Notes: 	- All fields are required.
 		Also, the characters used in the Encryption Key and Encryption IV must be in the UTF8 character set 
 		as they will be encoded from strings to bytes and vice versa using UTF8.
 		- The file name must be "BenMAPJiraConnector.txt"; no other file name will work.
+		- Make sure and use the Jira account's email address as the username and an API key as the password.
 5) Click Generate File to generate the BenMAPJiraConnector.txt file.
 6) Copy the Encryption Key and Encryption IV you used into notepad or some other text editor
 7) Close the BenMAPCrypt application.
